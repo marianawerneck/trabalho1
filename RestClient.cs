@@ -24,11 +24,13 @@ namespace trabalho1
             httpMethod = httpVerb.GET;
         }
 
-        public string MakeRequest(string endpoint)
+        public string MakeRequest(string endpoint, httpVerb method)
         {
             string response = string.Empty;
 
             _endpoint = endpoint;
+
+            httpMethod = method;
 
             HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(_endpoint);
 

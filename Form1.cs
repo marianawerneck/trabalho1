@@ -36,6 +36,16 @@ namespace trabalho1
 
         }
 
+        private void queryBtn_Click(object sender, EventArgs e)
+        {
+            //https://zoo-animal-api.herokuapp.com/animals/rand
+            restOutput.Text = "Querying the REST API...";
+            RestClient client = new RestClient();
+            string endpoint = zoaQuery.Text;
+            string response = client.MakeRequest(endpoint);
+            restOutput.Text = response;
+        }
+
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -45,5 +55,16 @@ namespace trabalho1
         {
             
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
